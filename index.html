@@ -1,0 +1,75 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="rps.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+  <title>Rock Paper Scissors by Scott</title>
+</head>
+
+<body>
+  <div class="game-container">
+    <h1 class = 'center'>Rock, Paper, Scissors!</h1>
+    <div class="button-container">
+      <div id="rock" class="option">
+        <img src="img/rock.png" /><br />
+        <span class="label">Rock</span>
+      </div>
+      <div id="paper" class="option">
+        <img src="img/paper.png" /><br />
+        <span class="label">Paper</span>
+      </div>
+      <div id="scissor" class="option">
+        <img src="img/scissor.png" /><br />
+        <span class="label">Scissors</span>
+      </div>
+    </div>
+
+    <div class="winnings">
+      <div class="result winBox">
+        <h2>Results</h2>
+        <div class="pick">
+          <span class="pickText">You:</span> <span id="userPick"></span>
+        </div>
+        <div class="pick">
+          <span class="pickText">Computer:</span> <span id="compPick"></span>
+        </div>
+        <div class="clearfix"></div>
+        <div class="result">
+          <span id="finalResult">Who won?</span>
+        </div>
+      </div>
+
+      <div class="scores winBox">
+        <h2>Score</h2>
+        <div class="userScore score-box">
+          User Score: <span id="userScore">0</span>
+        </div>
+        <div class="compScore score-box">
+          Computer Score: <span id="compScore">0</span>
+        </div>
+        <div class="ties score-box">
+          Ties: <span id="ties">0</span>
+        </div>
+      </div>
+
+      <div class="percent winBox">
+        <h2>Win/Loss Percentages</h2>
+        <div class="percent wins">
+          Wins: <span id="winPercent">0</span>%
+        </div>
+        <div class="percent losses">
+          Losses: <span id="lossPercent">0</span>%
+        </div>
+        <div class="percent ties">
+          Ties: <span id="tiePercent">0</span>%
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+  <script src="rps.js"></script>
+</body>
+
+</html>
