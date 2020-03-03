@@ -72,6 +72,13 @@ var computerGo = function() {
   return compChoice
 };
 
+// get percentages of wins and losses
+var getPercents = (function() {
+  totalPercent = userScore + compScore + ties
+  winPercent = (userScore / totalPercent) * 100
+  lossPercent = (compScore / totalPercent) * 100
+  tiePercent = (ties / totalPercent) * 100
+})
 // click functions
 var userChoice = function(choice) {
   console.log("User choice is ", choice)
@@ -94,25 +101,22 @@ var userChoice = function(choice) {
       ties++;
       console.log("It was a tie. number of ties is " + ties);
     }
+    getPercents()
   }() )
 
 
-// get percentages of wins and losses
-  // var getPercents = (function() {
-  //   totalPercent = userScore +
-  //   winPercent =
-  // })
+
   console.log("User score is now " + userScore + ", computer score is " + compScore + ".");
-  console.log("Win percent is: " + winPercent + "Loss Percent is : " lossPercent);
+  console.log("Win percent is: " + winPercent + "Loss Percent is : " + lossPercent);
   //update stored variables
   sysUserScore.textContent = userScore;
   sysCompScore.textContent = compScore;
   sysUserPick.textContent = userChoice;
   sysCompPick.textContent = compChoice;
   sysTies.textContent = ties;
-  sysWinPercent = winPercent;
-  sysLossPercent = lossPercent;
-  sysTiePercent = tiePercent;
+  sysWinPercent.textContent = Math.floor(winPercent);
+  sysLossPercent.textContent = Math.floor(lossPercent);
+  sysTiePercent.textContent = Math.floor(tiePercent);
   sysFinalResult.textContent = result[0];
 }
 
