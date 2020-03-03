@@ -8,7 +8,7 @@ var lossPercent = 0;
 var tiePercent = 0;
 
 
-// setting variables that are going to be our finals with a sys(system) prefix 
+// setting variables that are going to be our finals with a sys(system) prefix
 var sysUserScore = document.getElementById('userScore');
 var sysCompScore = document.getElementById('compScore');
 var sysUserPick = document.getElementById('userPick');
@@ -23,13 +23,13 @@ var sysTiePercent = document.getElementById('tiePercent');
 var compare = function(choice1, choice2) {
   if (choice1 === choice2) {
     console.log("Tie.")
-    return result = ["You tied with the computer!", "tie"]; 
+    return result = ["You tied with the computer!", "tie"];
   } else if (choice1 === "rock") {
     if (choice2 === "scissors") {
       console.log("rock > scissors");
       return result = ["Rock beats scissors! User wins!", "user"];
     } else if (choice2 === "paper") {
-      console.log( "paper > rock" );
+      console.log("paper > rock");
       return result = ["Paper covers rock! Computer Wins :'(", "comp"];
     }
   } else if (choice1 === "paper") {
@@ -37,7 +37,7 @@ var compare = function(choice1, choice2) {
       console.log("scissors > paper");
       return result = ["Scissors cut all the paper - Computer Wins :(", "comp"];
     } else if (choice2 === "rock") {
-      console.log( "paper > rock" )
+      console.log("paper > rock")
       return result = ["Paper Covers Rock. User wins!", "user"];
     }
   } else if (choice1 === "scissors") {
@@ -58,10 +58,10 @@ var computerGo = function() {
   var compChoice = Math.random();
   // computer is selecting a random number between 1 and 0
   // computer will now have a rock paper or scissors based on the random roll
-  if (compChoice < 0.34 ) {
+  if (compChoice < 0.34) {
     var compChoice = "rock";
     // console.log("Computer's choice is" + compChoice);
-  } else if(compChoice <= 0.67 ) {
+  } else if (compChoice <= 0.67) {
     var compChoice = "paper";
     // console.log("Computer's choice is" + compChoice);
   } else {
@@ -89,7 +89,7 @@ var userChoice = function(choice) {
   console.log(result[0]);
 
   var getResult = (function() {
-    if (result[1] === "user"){
+    if (result[1] === "user") {
       userScore++;
       // console.log("+1 to user. userScore is now " + userScore);
       return userScore;
@@ -102,7 +102,7 @@ var userChoice = function(choice) {
       console.log("It was a tie. number of ties is " + ties);
     }
     getPercents()
-  }() )
+  }())
 
 
 
