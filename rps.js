@@ -120,7 +120,10 @@ var userChoice = function(choice) {
   sysFinalResult.textContent = result[0];
 }
 
-var rockBox = document.getElementById('rock');
+// trying to figure jquery out
+// $("rock").click({choice: "rock"}, userChoice);
+
+var rockBox =  document.getElementById('rock');
 rockBox.addEventListener('click', function() {
   userChoice("rock");
 }, false);
